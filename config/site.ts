@@ -3,6 +3,13 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
 	name: "Space Otters",
 	logo: "logo.png",
+
+	bg_dark: "bg-[#B4C8D8]",
+	background_light: "bg-[#064F81]",
+	text_on_dark: "bg-[#B4C8D8]",
+	text_on_light:"bg-[#064F81]",
+
+
 	navItems: [
 		{
 			label: "About FTC",

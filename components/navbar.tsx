@@ -19,7 +19,7 @@ export const Navbar = () => {
 			<NavbarContent className="flex items-center justify-end" justify="start">
 				<NavbarBrand as="li" className="gap-3 max-w-fit ">
 					<NextLink href="/">
-						<p className="font-bold text-inherit">Space Otters</p>
+						<p className="font-bold ">Space Otters</p>
 					</NextLink>
 				</NavbarBrand>
 				<ul className="hidden sm:flex flex-1 justify-end gap-4 ml-2">

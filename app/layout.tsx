@@ -9,7 +9,7 @@ const roca = localFont({
   src: [
     {
       path: '../public/fonts/Roca Black.ttf',
-      weight: '500'
+      weight: '400'
     },
   ],
   variable: '--font-roca'
@@ -27,9 +27,9 @@ export default function RootLayout({
 				<title>{siteConfig.name}</title>
 			</head>
 			<body
-				className={`${roca.variable} font-sans`}
+				className={`${roca.variable} font-sans bg-space-dark text-space-light`}
 			>
-				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+				<Providers>
 					<Page/>
 				</Providers>
 			</body>

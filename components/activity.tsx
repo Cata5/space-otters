@@ -33,18 +33,18 @@ export default function Activity() {
   }, );
 
   return (
-    <div className="flex flex-col m-auto items-center justify-center max-w-7xl">
+    <div className="flex flex-col m-auto items-center justify-center max-w-7xl ">
       <h1 className="text-center text-4xl">Activity in the community </h1>
-      <div className="flex flex-row flex-wrap items-center justify-center gap-[2rem] m-[2rem]">
+      <div className="flex flex-row flex-wrap items-center justify-center gap-[2rem] m-[2rem] ">
       {siteConfig.activity.map((activity) => (
-        <Card key={activity.title} className="max-w-full xl:max-w-[46%]">
+        <Card key={activity.title} className="max-w-full xl:max-w-[46%] bg-space-light text-space-dark">
           <div className="flex items-end justify-center py-5">
             <h1 className="text-justify text-2xl">{activity.title}</h1>
           </div>
 
-          <CardBody className="px-6 py-6 max-h-[350px] indent-[1rem] text-justify text-medium text-default-500">
+          <CardBody className="px-6 py-6 max-h-[350px] indent-[1rem] text-justify text-medium text-default-600">
             <ScrollShadow>
-              <p>{fileContents[activity.title]}</p>
+              <p className="text-space-dark">{fileContents[activity.title]}</p>
             </ScrollShadow>
           </CardBody>
           <CardFooter className="gap-3">

@@ -8,7 +8,7 @@ export default function Sponsors() {
         <h1 className="text-[2.5rem] my-[1rem]">Sponsors</h1>
         <div className=" flex flex-row items-center justify-center gap-[1rem] flex-wrap m-auto">
         {siteConfig.sponsors_items.map((sponsors) => (
-            <Card key={sponsors.label} className="w-full">
+            <Card key={sponsors.label} className="w-full  bg-space-light">
                 <CardHeader className="flex gap-3">
                     <Image
                         alt="nextui logo"
@@ -19,13 +19,13 @@ export default function Sponsors() {
                         className="pr-[2rem]"
                     />
                     <div  className="flex flex-col">
-                        <p className="text-3xl">{sponsors.label}</p>
-                        <p className="text-small text-default-500 py-2">{sponsors.website}</p>
+                        <p className="text-3xl text-space-dark">{sponsors.label}</p>
+                        <p className="text-small py-2 text-space-dark opacity-[.7]">{sponsors.website}</p>
                     </div>
                 </CardHeader>
                 <Divider />
                 <CardBody>
-                    <p>{sponsors.description}</p>
+                    <p className="text-space-dark">{sponsors.description}</p>
                 </CardBody>
                 <Divider />
                 <CardFooter>

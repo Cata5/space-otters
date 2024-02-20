@@ -7,7 +7,7 @@ export default function Obiective() {
     return (
         <div className="flex flex-col flex-1 items-center justify-center max-w-7xl overflow-hidden mx-4 ">
             <h1 className="text-4xl my-4 font-bold">Obiective</h1>
-            <Card className='px-[4.5rem]'>
+            <Card className='px-[4.5rem] bg-space-light text-space-dark '>
                 <CardBody className=''>
                 <h2>
                 <ul className="list-disc pl-3 [&>li]:text-xl">

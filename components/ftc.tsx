@@ -16,7 +16,7 @@ export default function Ftc() {
         fetchTextFile();
     }, []);
     return (
-        <div className="max-w-6xl overflow-hidden mx-[1rem]">
+        <div className=" overflow-hidden mx-[1rem] max-w-7xl">
             <p className="whitespace-pre-wrap break-words">{fileContent}</p>
         </div>
     )

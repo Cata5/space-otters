@@ -33,9 +33,11 @@ export default function Activity() {
   }, );
 
   return (
-    <div className="flex flex-row m-auto items-center justify-center gap-[1rem] mx-[1rem] flex-wrap">
+    <div className="flex flex-col m-auto items-center justify-center max-w-7xl">
+      <h1 className="text-center text-4xl">Activity in the community </h1>
+      <div className="flex flex-row flex-wrap items-center justify-center gap-[2rem] m-[2rem]">
       {siteConfig.activity.map((activity) => (
-        <Card key={activity.title} className="max-w-[540px]">
+        <Card key={activity.title} className="max-w-full xl:max-w-[46%]">
           <div className="flex items-end justify-center py-5">
             <h1 className="text-justify text-2xl">{activity.title}</h1>
           </div>
@@ -49,6 +51,7 @@ export default function Activity() {
           </CardFooter>
         </Card>
       ))}
+      </div>
     </div>
   );
 }

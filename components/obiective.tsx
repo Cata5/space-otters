@@ -5,9 +5,9 @@ import { Card, CardBody } from "@nextui-org/react";
 export default function Obiective() {
 
     return (
-        <div className="flex flex-col items-center justify-center max-w-6xl overflow-hidden mx-4">
+        <div className="flex flex-col items-center justify-center max-w-7xl overflow-hidden mx-4 ">
             <h1 className="text-4xl my-4 font-bold">Obiective</h1>
-            <Card>
+            <Card className='w-7xl'>
                 <CardBody className='p-[3rem]'>
                 <h2>
                 <ul className="list-disc pl-4 [&>li]:text-xl">

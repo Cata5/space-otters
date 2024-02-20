@@ -37,11 +37,11 @@ export const siteConfig = {
 	activity:[
 		{
 			title: "Activitate",
-			file_path: "/text/ftc.txt",
+			file_path: "./text/ftc.txt",
 		},
 		{
 			title: "Activitate2",
-			file_path: "/text/ftc.txt",
+			file_path: "./text/ftc.txt",
 		},
 	],
 	members_img_sizes:{

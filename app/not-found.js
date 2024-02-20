@@ -21,10 +21,10 @@ const roca = localFont({
 
 export default function Page() {
   return (
-    <div className="[&>div]:flex [&>div]:items-center [&>div]:justify-center [&>div]:py-[10rem]">
+    <div>
       <Navbar />
       {siteConfig.navItems.map((item) => (
-        <div key={item.href} id={item.href}>
+        <div key={item.href} id={item.href} className="flex items-center justify-center py-[10rem] ">
           {item.href === "obiective" && <Obiective />}
           {item.href === "about_ftc" && <Ftc />}
           {item.href === "activity" && <Activity />}

@@ -29,7 +29,7 @@ export default function RootLayout({
 			<body
 				className={`${roca.variable} font-sans bg-space-dark text-space-light`}
 			>
-				<Providers>
+				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
 					<Page/>
 				</Providers>
 			</body>

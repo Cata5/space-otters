@@ -16,13 +16,13 @@ export const Navbar = () => {
 
 	return (
 		<NextUINavbar position="sticky" >
-			<NavbarContent className="flex items-center justify-end" justify="start">
-				<NavbarBrand as="li" className="gap-3 max-w-fit ">
+			<NavbarContent className="flex items-center justify-end " justify="start">
+				<NavbarBrand as="li" className="gap-3">
 					<NextLink href="/">
 						<p className="font-bold ">Space Otters</p>
 					</NextLink>
 				</NavbarBrand>
-				<ul className="hidden sm:flex flex-1 justify-end gap-4 ml-2">
+				<ul className="hidden md:flex flex-1 justify-end gap-4 ml-2">
 					{siteConfig.navItems.map((item) => (
 						<Button className="bg-transparent text-small" key={item.href} onClick={() => {
 							const element = document.getElementById(item.href);
@@ -39,7 +39,7 @@ export const Navbar = () => {
 				<NavbarMenuToggle />
 			</NavbarContent>
 
-			<NavbarMenu>
+			<NavbarMenu className="bg-white">
 				<div className="mx-4 mt-2 flex flex-col gap-2">
 					{siteConfig.navItems.map((item) => (
 						<Button className="bg-transparent" key={item.href} onClick={() => {

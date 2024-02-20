@@ -35,12 +35,12 @@ export default function Activity() {
   return (
     <div className="flex flex-row m-auto items-center justify-center gap-[1rem] mx-[1rem] flex-wrap">
       {siteConfig.activity.map((activity) => (
-        <Card key={activity.title} className="max-w-[340px]">
+        <Card key={activity.title} className="max-w-[540px]">
           <div className="flex items-end justify-center py-5">
-            <h4 className="text-justify">{activity.title}</h4>
+            <h1 className="text-justify text-2xl">{activity.title}</h1>
           </div>
 
-          <CardBody className="px-3 py-3 max-h-[350px] text-small text-default-500">
+          <CardBody className="px-6 py-6 max-h-[350px] indent-[1rem] text-justify text-medium text-default-500">
             <ScrollShadow>
               <p>{fileContents[activity.title]}</p>
             </ScrollShadow>

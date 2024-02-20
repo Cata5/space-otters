@@ -1,6 +1,5 @@
 "use client";
 import "@/styles/globals.css";
-import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
 import Sponsors from "@/components/sponsors";
 import Members from "@/components/members";

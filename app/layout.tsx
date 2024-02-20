@@ -1,12 +1,6 @@
 "use client"
 import "@/styles/globals.css";
 import { Providers } from "./providers";
-import { Navbar } from "@/components/navbar";
-import Sponsors from "@/components/sponsors";
-import Members from "@/components/members";
-import Ftc from "@/components/ftc";
-import Activity from "@/components/activity";
-import Obiective from "@/components/obiective";
 import { siteConfig } from "@/config/site";
 import localFont from '@next/font/local'
 import Page from "./not-found";
@@ -29,7 +23,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<head >
-			<link rel="icon" href={`/logo/${siteConfig.logo}`} sizes="any" className="rounded-full" />
+			<link rel="icon" href={`./logo/${siteConfig.logo}`} sizes="any" className="rounded-full" />
 				<title>{siteConfig.name}</title>
 			</head>
 			<body

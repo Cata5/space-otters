@@ -29,10 +29,10 @@ export const siteConfig = {
 		path: "instagram.512x512.png",
 	},
 	obiective:{
-		file_path:"/text/obiective.txt",
+		file_path:"./text/obiective.txt",
 	},
 	ftc_description: {
-		file_path: "/text/ftc.txt",
+		file_path: "./text/ftc.txt",
 	},
 	activity:[
 		{

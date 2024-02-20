@@ -9,6 +9,7 @@ import Activity from "@/components/activity";
 import Obiective from "@/components/obiective";
 import { siteConfig } from "@/config/site";
 import localFont from '@next/font/local'
+import Page from "./not-found";
 
 const roca = localFont({
   src: [
@@ -35,18 +36,7 @@ export default function RootLayout({
 				className={`${roca.variable} font-sans`}
 			>
 				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-					<div className="[&>div]:flex [&>div]:items-center [&>div]:justify-center [&>div]:py-[10rem]">
-						<Navbar />
-						{siteConfig.navItems.map((item) => (
-							<div key={item.href} id={item.href}>
-								{item.href === "obiective" && <Obiective />}
-								{item.href === "about_ftc" && <Ftc />}
-								{item.href === "activity" && <Activity />}
-								{item.href === "sponsors" && <Sponsors />}
-								{item.href === "members" && <Members />}
-							</div>
-						))}
-					</div>
+					<Page/>
 				</Providers>
 			</body>
 		</html>

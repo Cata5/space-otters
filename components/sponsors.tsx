@@ -14,7 +14,7 @@ export default function Sponsors() {
                         alt="nextui logo"
                         height={sponsors.height}
                         radius="sm"
-                        src={`/sponsors_photos/${sponsors.logo}`}
+                        src={`./sponsors_photos/${sponsors.logo}`}
                         width={sponsors.width}
                         className="pr-[2rem]"
                     />

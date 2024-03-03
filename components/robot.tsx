@@ -6,7 +6,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 
 
 const Model = () => {
-  const gltf = useLoader(GLTFLoader, "./robot2.gltf");
+  const gltf = useLoader(GLTFLoader, "./robot.gltf");
 
   return (
     <>

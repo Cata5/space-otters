@@ -23,7 +23,7 @@ export default function Page() {
   return (
     <div>
       <Navbar />
-      <Robot className="mt-[10rem]"/>
+      <Robot className="mt-[10rem] hidden xl:block"/>
       {siteConfig.navItems.map((item) => (
         <div key={item.href} id={item.href} className="flex items-center justify-center py-[10rem] ">
           {item.href === "obiective" && <Obiective />}

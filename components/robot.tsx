@@ -18,9 +18,6 @@ const Model = () => {
 export default function Robot() {
   return (
     <div>
-      <Head>
-        <title>Robot Model</title>
-      </Head>
       <div className="globe">
         <Canvas shadows dpr={[1, 2]} camera={{ position: [0, 0, .75], fov: 25 }}> {/* Decreased Z-coordinate for closer view */}
           <Suspense fallback={null}>

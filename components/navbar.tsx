@@ -56,7 +56,7 @@ export const Navbar = () => {
             <Image src="./logo/Logo_Space_dark.png" width={90} height={50} alt="" />
           </NextLink>
         </NavbarBrand>
-		<Button
+        <Button
           className="bg-transparent text-small text-space-dark"
           onClick={toggleMenu}
         >
@@ -77,26 +77,26 @@ export const Navbar = () => {
               />
             </svg>
           ) : (
-			<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
-			viewBox="0 0 24 24"
-			stroke="currentColor"
-			className="h-6 w-6"
-			onClick={toggleMenu}
-		  >
-			<path
-			  strokeLinecap="round"
-			  strokeLinejoin="round"
-			  strokeWidth={2}
-			  d="M4 6h16M4 12h16M4 18h16"
-			/>
-		  </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="h-6 w-6"
+              onClick={toggleMenu}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
           )}
         </Button>
       </NavbarContent>
 
-      <NavbarMenu isOpen={isMenuOpen} onClose={closeMenu} className="fixed top-0 left-0 w-full h-full bg-gray-800 transition-opacity ease-in-out duration-300">
+      <NavbarMenu className={`fixed top-0 left-0 w-full h-full bg-gray-800 transition-opacity ease-in-out duration-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
         <NavbarMenuToggle onClick={toggleMenu} />
         <ul className="flex flex-col items-center justify-center h-full">
           {siteConfig.navItems.map((item) => (

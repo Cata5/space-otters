@@ -10,8 +10,6 @@ body {
 }
 
 .globe {
-  display: grid;
   place-items: center;
   height: 100vh;
-  cursor: grabbing;
 }

@@ -41,8 +41,8 @@ export default function Dacia() {
                     <p className="text-md text-center sm:text-xl sm:text-justify whitespace-pre-wrap">
                         {introContent}</p>
                     <div className="flex flex-col xl:flex-row gap-4">
-                        <Image src="../../evenimente_photos/Dacia_SO.jpg" width={600} height={650} loading="lazy" alt="Space Otter team at Dacia" />
-                        <Image src="../../evenimente_photos/Dacia_workers.jpg" width={600} height={650} loading="lazy" alt="Workers of Dacia " />
+                        <Image src="../evenimente_photos/Dacia_SO.jpg" width={600} height={650} loading="lazy" alt="Space Otter team at Dacia" />
+                        <Image src="../evenimente_photos/Dacia_workers.jpg" width={600} height={650} loading="lazy" alt="Workers of Dacia " />
                     </div>
                     <h1 className="text-center sm:text-left text-3xl sm:text-5xl ">Desfasurare</h1>
                     <p className="text-md text-center sm:text-xl sm:text-justify whitespace-pre-wrap">{desfContent}</p>

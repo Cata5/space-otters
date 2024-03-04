@@ -20,15 +20,15 @@ export const siteConfig = {
 			href:"obiective",
 		},
 		{
-			label: "Activity",
-			href: "activity",
+			label: "Evenimente",
+			href: "evenimente",
 		},
 		{
-			label: "Sponsors",
-			href: "sponsors",
+			label: "Sponsori",
+			href: "sponsori",
 		},
 		{
-			label: "Team Members",
+			label: "Membrii Echipei",
 			href: "members",
 		},
 	],	
@@ -43,7 +43,7 @@ export const siteConfig = {
 	},
 	activity:[
 		{
-			title: "Activitate",
+			title: "Dacia",
 			file_path: "./text/ftc.txt",
 		},
 		{

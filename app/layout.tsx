@@ -3,7 +3,6 @@ import "@/styles/globals.css";
 import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import localFont from '@next/font/local'
-import Page from "./not-found";
 
 const roca = localFont({
   src: [
@@ -30,7 +29,8 @@ export default function RootLayout({
 				className={`${roca.variable} font-sans bg-space-dark text-space-light`}
 			>
 				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-					<Page/>
+					{children}
+					
 				</Providers>
 			</body>
 		</html>

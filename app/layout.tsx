@@ -22,7 +22,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<head >
-				<link rel="icon" href={`../logo/${siteConfig.logo}`} sizes="any" className="rounded-full" />
+				<link rel="icon" href={`./logo/${siteConfig.logo}`} sizes="any" className="rounded-full" />
 				<title>{siteConfig.name}</title>
 			</head>
 			<body className={`${roca.variable} font-sans bg-space-dark text-space-light`}>

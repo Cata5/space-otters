@@ -48,12 +48,12 @@ export default function Dacia() {
             <div className="flex items-center justify-center mx-[1.75rem] xl:m-auto flex-col max-w-7xl">
                 <h1 className="text-3xl sm:text-5xl py-[1rem]">Vizita Dacia</h1>
                 <div className="py-[10rem] flex gap-[4rem] flex-col">
-                    <h1 className="text-3xl">Introducere</h1>
+                    <h1 className="text-3xl text-center sm:text-left">Introducere</h1>
                     <div
-                        className="text-md text-center sm:text-xl sm:text-justify"
+                        className="text-md text-center sm:text-xl sm:text-justify whitespace-pre-wrap"
                         dangerouslySetInnerHTML={{ __html: introContent || "" }}
                     />
-                    <h1 className="text-3xl">Desfasurare</h1>
+                    <h1 className="text-3xl text-center sm:text-left">Desfasurare</h1>
                     <div
                         className="text-md text-center sm:text-xl sm:text-justify whitespace-pre-wrap"
                         dangerouslySetInnerHTML={{ __html: desfContent || "" }}

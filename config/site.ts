@@ -33,8 +33,12 @@ export const siteConfig = {
 		},
 	],
 	evenimente:{
-		dacia_introd:'../text/dacia-introd.docx',
+		dacia_introd:'../text/dacia_introd.docx',
 		dacia_desf:'../text/dacia_desf.docx',
+		scoli_introd:'../text/scoli_introd.docx',
+		scoli_scop:'../text/scoli_scop.docx',
+		scoli_desf:'../text/scoli_desf.docx',
+		
 	},	
 	instagram_icon: {
 		path: "instagram.512x512.png",
@@ -51,7 +55,7 @@ export const siteConfig = {
 			file_path: "./text/ftc.txt",
 		},
 		{
-			title: "Activitate2",
+			title: "Scoli",
 			file_path: "./text/ftc.txt",
 		},
 	],

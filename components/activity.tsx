@@ -46,11 +46,12 @@ export default function Activity() {
             key={activity.title}
             className={`flex flex-col grow ${index === array.length - 1 && array.length % 2 != 0
                 ? 'max-w-full'
-                : 'max-w-[48.6%]'
-              } bg-space-light text-space-dark hover:cursor-pointer`}
+                : 'max-w-[25%]'
+              } bg-space-light text-space-dark hover:cursor-pointer flex items-center`}
+              isPressable onPress={() => router.push(`/evenimente/${activity.title.toLowerCase()}`)}
           >
             <div className="py-5">
-              <h1 className="text-center text-2xl">{activity.title}</h1>
+              <h1 className="text-2xl">{activity.title}</h1>
             </div>
 
             <CardBody className="px-6 py-6 max-h-[350px] indent-[1rem] text-justify text-medium text-default-600">

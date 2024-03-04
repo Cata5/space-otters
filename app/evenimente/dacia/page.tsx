@@ -34,6 +34,7 @@ export default function Dacia() {
 
     return (
         <div>
+            <link rel="icon" href={`../logo/${siteConfig.logo}`} sizes="any" className="rounded-full" />
             <div className="max-w-screen-xl mx-auto p-8">
                 <h1 className="text-center text-3xl sm:text-5xl py-4">Vizita Dacia</h1>
                 <div className="py-16 flex flex-col gap-8">
@@ -46,10 +47,11 @@ export default function Dacia() {
                     </div>
                     <h1 className="text-center sm:text-left text-3xl sm:text-5xl ">Desfasurare</h1>
                     <p className="text-md text-center sm:text-xl sm:text-justify whitespace-pre-wrap">{desfContent}</p>
-                    <Image className="self-center " src="../../evenimente_photos/Dacia_robot.jpg" width={1300} height={0} loading="lazy" alt="Workers of Dacia " />
+                    <Image className="self-center " src="../evenimente_photos/Dacia_robot.jpg" width={1300} height={0} loading="lazy" alt="Workers of Dacia " />
                 </div>
             </div>
         </div>
+        
     );
 }
 

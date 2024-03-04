@@ -12,10 +12,6 @@ export const siteConfig = {
 
 	navItems: [
 		{
-			label: "About FTC",
-			href: "about_ftc",
-		},
-		{
 			label: "Obiective",
 			href:"obiective",
 		},

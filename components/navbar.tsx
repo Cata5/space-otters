@@ -27,7 +27,7 @@ export const Navbar = () => {
       <NavbarContent className="hidden items-center justify-end md:flex text-space-dark" justify="start">
         <NavbarBrand as="li" className="gap-3">
           <NextLink href="/">
-            <Image src="./logo/Logo_Space_dark.png" width={90} height={50} alt="" />
+            <Image src="./logo/Logo_Space_dark.png" width={90} height={50} alt="" priority />
           </NextLink>
         </NavbarBrand>
         <ul className="hidden md:flex flex-1 justify-end gap-4 ml-2">
@@ -53,7 +53,7 @@ export const Navbar = () => {
       <NavbarContent className="md:hidden flex">
         <NavbarBrand as="li" className=" flex items-center justify-center m-auto ml-[3.5rem]">
           <NextLink href="/">
-            <Image src="./logo/Logo_Space_dark.png" width={90} height={50} alt="" />
+            <Image src="./logo/Logo_Space_dark.png" width={90} height={50} alt=""  priority/>
           </NextLink>
         </NavbarBrand>
         <Button
@@ -108,7 +108,7 @@ export const Navbar = () => {
                 element?.scrollIntoView({
                   behavior: 'smooth',
                 });
-                closeMenu(); // Close the menu when an item is clicked
+                closeMenu();
               }}
             >
               {item.label}

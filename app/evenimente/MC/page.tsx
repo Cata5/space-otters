@@ -38,11 +38,11 @@ export default function Scoli() {
         };
 
         // Fetch text for "Introducere" when the component mounts
-        fetchDocxFile(siteConfig.evenimente.scoli_introd, setIntroContent);
-        fetchDocxFile(siteConfig.evenimente.scoli_scop, setScopContent);
+        fetchDocxFile(siteConfig.evenimente.meet_and_code_introd, setIntroContent);
+        fetchDocxFile(siteConfig.evenimente.meet_and_code_scop, setScopContent);
 
         // Fetch text for "Desfasurare" when the component mounts
-        fetchDocxFile(siteConfig.evenimente.scoli_desf, setDesfContent);
+        fetchDocxFile(siteConfig.evenimente.meet_and_code_desf, setDesfContent);
     }, []);
 
     return (

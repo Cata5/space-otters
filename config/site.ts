@@ -35,9 +35,18 @@ export const siteConfig = {
 	evenimente:{
 		dacia_introd:'../text/dacia_introd.docx',
 		dacia_desf:'../text/dacia_desf.docx',
+		ipad_introd:'../text/ipad_introd.docx',
+		ipad_desf:'../text/ipad_desf.docx',
+		antidorg_introd:'../text/antidorg_introd.docx',
+		antidorg_desf:'../text/antidorg_desf.docx',
+		wild_tech_introd:'../text/wild_tech_introd.docx',
+		wild_tech_desf:'../text/wild_tech_desf.docx',
 		scoli_introd:'../text/scoli_introd.docx',
 		scoli_scop:'../text/scoli_scop.docx',
 		scoli_desf:'../text/scoli_desf.docx',
+		meet_and_code_introd:'../text/meet_and_code_introd.docx',
+		meet_and_code_scop:'../text/meet_and_code_scop.docx',
+		meet_and_code_desf:'../text/meet_and_code_desf.docx',
 		
 	},	
 	instagram_icon: {
@@ -52,6 +61,26 @@ export const siteConfig = {
 	activity:[
 		{
 			title: "Dacia",
+			file_path: "./text/ftc.txt",
+		},
+		{
+			title: "Scoli",
+			file_path: "./text/ftc.txt",
+		},
+		{
+			title: "Anti-Drog",
+			file_path: "./text/ftc.txt",
+		},
+		{
+			title: "Vizita iPad",
+			file_path: "./text/ftc.txt",
+		},
+		{
+			title: "Meet-And-Code",
+			file_path: "./text/ftc.txt",
+		},
+		{
+			title: "Wild-Tech-Meet",
 			file_path: "./text/ftc.txt",
 		},
 		{

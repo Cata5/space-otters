@@ -72,7 +72,7 @@ export const siteConfig = {
 			file_path: "./text/ftc.txt",
 		},
 		{
-			title: "Vizita iPad",
+			title: "Vizita-iPad",
 			file_path: "./text/ftc.txt",
 		},
 		{

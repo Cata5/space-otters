@@ -31,7 +31,11 @@ export const siteConfig = {
 			label: "Membrii Echipei",
 			href: "members",
 		},
-	],	
+	],
+	evenimente:{
+		dacia_introd:'../text/dacia-introd.docx',
+		dacia_desf:'../text/dacia_desf.docx',
+	},	
 	instagram_icon: {
 		path: "instagram.512x512.png",
 	},

@@ -83,10 +83,6 @@ export const siteConfig = {
 			title: "Wild-Tech-Meet",
 			file_path: "./text/ftc.txt",
 		},
-		{
-			title: "Scoli",
-			file_path: "./text/ftc.txt",
-		},
 	],
 	members_img_sizes:{
 		width: 300,

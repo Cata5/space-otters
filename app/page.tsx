@@ -25,7 +25,7 @@ export default function Home() {
       <Navbar />
       {/* <Robot/> */}
       {siteConfig.navItems.map((item) => (
-        <div key={item.href} id={item.href} className="flex items-center justify-center py-[10rem] ">
+        <div key={item.href} id={item.href} className="flex items-center justify-center py-[5rem] ">
           {item.href === "obiective" && <Obiective />}
           {item.href === "about_ftc" && <Ftc />}
           {item.href === "evenimente" && <Activity />}

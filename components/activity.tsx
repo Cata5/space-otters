@@ -41,10 +41,16 @@ export default function Activity() {
     <div className="flex flex-col m-auto items-center justify-center max-w-7xl ">
       <h1 className="text-center text-4xl">Evenimente</h1>
       <div className="flex flex-row flex-wrap items-center justify-center gap-[2rem] m-[2rem] ">
-        {siteConfig.activity.map((activity) => (
-          <Card key={activity.title} className="max-w-full xl:max-w-[46%] bg-space-light text-space-dark hover:cursor-pointer flex items-center" isPressable onPress={() => router.push(`/evenimente/${activity.title.toLowerCase()}`)}>
-            <div className="py-5" >
-              <h1 className="text-justify text-2xl">{activity.title}</h1>
+        {siteConfig.activity.map((activity, index, array) => (
+          <Card
+            key={activity.title}
+            className={`flex flex-col grow ${index === array.length - 1 && array.length % 2 != 0
+                ? 'max-w-full'
+                : 'max-w-[48.6%]'
+              } bg-space-light text-space-dark hover:cursor-pointer`}
+          >
+            <div className="py-5">
+              <h1 className="text-center text-2xl">{activity.title}</h1>
             </div>
 
             <CardBody className="px-6 py-6 max-h-[350px] indent-[1rem] text-justify text-medium text-default-600">
@@ -52,7 +58,9 @@ export default function Activity() {
                 <p className="text-space-dark">{fileContents[activity.title]}</p>
               </ScrollShadow>
             </CardBody>
+
             <CardFooter className="gap-3">
+              {/* Your CardFooter content */}
             </CardFooter>
           </Card>
         ))}

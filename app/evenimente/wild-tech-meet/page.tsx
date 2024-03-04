@@ -46,7 +46,7 @@ export default function Wild_tech() {
     return (
         <div>
             <div className="flex items-center justify-center mx-[1.75rem] xl:m-auto flex-col max-w-7xl">
-                <h1 className="text-3xl sm:text-5xl py-[1rem]">Vizita Dacia</h1>
+                <h1 className="text-3xl sm:text-5xl py-[1rem]">Wild Tech Meet</h1>
                 <div className="py-[10rem] flex gap-[4rem] flex-col">
                     <h1 className="text-3xl text-center sm:text-left">Introducere</h1>
                     <div

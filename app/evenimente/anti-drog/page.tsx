@@ -35,7 +35,7 @@ export default function AntiDrog() {
   return (
     <div>
       <div className="flex items-center justify-center mx-[1.75rem] xl:m-auto flex-col max-w-7xl">
-        <h1 className="text-3xl sm:text-5xl py-4">Vizita Anti-Drog</h1>
+        <h1 className="text-3xl sm:text-5xl py-4">Eveniment Anti-Drog</h1>
         <div className="py-16 flex flex-col gap-8">
           <h1 className="text-center sm:text-left text-3xl sm:text-5xl">Introducere</h1>
           <div

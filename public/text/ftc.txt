@@ -1,0 +1,3 @@
+FIRST Tech Challenge students learn to think like engineers. 
+Teams design, build, and code robots to compete in an alliance format against other teams. 
+Robots are built from a reusable platform, powered by Android technology, and can be coded using a variety of levels of Java-based programming.

@@ -1,9 +1,12 @@
 "use client"
 
+
+
+
 import React, { useEffect, useState } from "react";
 import { siteConfig } from "@/config/site";
 
-export default function Scoli() {
+export default function Chorma_Fusion() {
   const [introContent, setIntroContent] = useState<string | null>(null);
   const [scopContent, setScopContent] = useState<string | null>(null);
   const [desfContent, setDesfContent] = useState<string | null>(null);
@@ -25,17 +28,17 @@ export default function Scoli() {
     };
 
     // Fetch text for "Introducere" when the component mounts
-    fetchTxtFile(siteConfig.evenimente.meet_and_code_introd, setIntroContent);
-    fetchTxtFile(siteConfig.evenimente.meet_and_code_scop, setScopContent);
+    fetchTxtFile(siteConfig.evenimente.cf_introd, setIntroContent);
+    fetchTxtFile(siteConfig.evenimente.cf_scop, setScopContent);
 
     // Fetch text for "Desfasurare" when the component mounts
-    fetchTxtFile(siteConfig.evenimente.meet_and_code_desf, setDesfContent);
+    fetchTxtFile(siteConfig.evenimente.cf_desf, setDesfContent);
   }, []);
 
   return (
-    <div>
+    <div className="h-screen">
       <div className="flex items-center justify-center mx-[1.75rem] xl:m-auto flex-col max-w-7xl">
-        <h1 className="text-3xl sm:text-5xl py-4">Meet and Code</h1>
+        <h1 className="text-3xl sm:text-5xl py-4">Chroma Fusion</h1>
         <div className="py-16 flex flex-col gap-8">
           <h1 className="text-center sm:text-left text-3xl sm:text-5xl">Introducere</h1>
           <div

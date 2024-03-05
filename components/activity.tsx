@@ -44,11 +44,13 @@ export default function Activity() {
         {siteConfig.activity.map((activity, index, array) => (
           <Card
             key={activity.title}
-            className={`flex flex-col grow ${index === array.length - 1 && array.length % 2 != 0
-                ? 'max-w-full'
-                : 'max-w-[25%]'
+            className={`flex flex-col grow ${(index === array.length - 1 && array.length % 3 === 1) ? 'max-w-[80%]' :
+                (index >= array.length - 2 && array.length%3 === 2) ? 'max-w-[38.8%]' :
+                  (index >= array.length - 3 && array.length%3 === 0) ? 'max-w-[25%]' :
+                    'max-w-[25%]'
               } bg-space-light text-space-dark hover:cursor-pointer flex items-center`}
-              isPressable onPress={() => router.push(`/evenimente/${activity.title.toLowerCase()}`)}
+            isPressable
+            onPress={() => router.push(`/evenimente/${activity.href}`)}
           >
             <div className="py-5">
               <h1 className="text-2xl">{activity.title}</h1>
@@ -65,6 +67,7 @@ export default function Activity() {
             </CardFooter>
           </Card>
         ))}
+
       </div>
     </div>
   );

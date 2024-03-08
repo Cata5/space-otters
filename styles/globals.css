@@ -13,3 +13,11 @@ body {
   place-items: center;
   height: 100vh;
 }
+
+:root{
+  --swiper-navigation-color :"#B4C8D8";
+  
+}
+.swiper-scrollbar-drag,.swiper-pagination-bullet{ 
+  background-color: #B4C8D8 !important;
+}

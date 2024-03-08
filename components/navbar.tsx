@@ -1,121 +1,78 @@
-import { useState } from 'react';
-import {
-  Navbar as NextUINavbar,
-  NavbarContent,
-  NavbarMenu,
-  NavbarMenuToggle,
-  NavbarBrand,
-} from "@nextui-org/navbar";
+import Link from "next/link";
+import React, { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { siteConfig } from "@/config/site";
-import NextLink from "next/link";
-import { Button } from "@nextui-org/button";
 import Image from "next/image";
+import { Button } from "@nextui-org/button";
 
-export const Navbar = () => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
+const Navbar = () => {
+  const [nav, setNav] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setMenuOpen(false);
+  const handleSmoothScroll = (href: string) => {
+    const target = document.getElementById(href);
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+      });
+      setNav(false); // Close the menu after clicking a link
+    }
   };
 
   return (
-    <NextUINavbar position="sticky" className="bg-space-light" shouldHideOnScroll>
-      <NavbarContent className="hidden items-center justify-end md:flex text-space-dark" justify="start">
-        <NavbarBrand as="li" className="gap-3">
-          <NextLink href="/">
-            <Image src="./logo/Logo_Space_dark.png" width={90} height={50} alt="" priority />
-          </NextLink>
-        </NavbarBrand>
-        <ul className="hidden md:flex flex-1 justify-end gap-4 ml-2">
-          {siteConfig.navItems.map((item) => (
-            <Button
-              className="bg-transparent text-small text-space-dark"
-              key={item.href}
-              onClick={() => {
-                const element = document.getElementById(item.href);
-                element?.scrollIntoView({
-                  behavior: 'smooth',
-                });
-                closeMenu(); // Close the menu when an item is clicked
-              }}
+    <div
+      className={`flex xl:justify-center justify-between  items-center h-20 px-4 bg-space-light fixed w-full shadow-xl z-[100]  ${
+        nav ? "py-4" : ""
+      }`}
+    >
+      <div className="flex items-center gap-[20rem]">
+        <h1 className="text-2xl font-semibold text-space-dark">
+          <Image src={'./logo/Logo_Space_dark.png'} alt="" width={90} height={50} />
+        </h1>
+
+        <ul className="hidden xl:flex ml-8 space-x-4">
+          {siteConfig.navItems.map(({ label, href }) => (
+            <li
+              key={label}
+              className="text-sm text-space-dark hover:text-space-medium transition duration-300"
             >
-              {item.label}
-            </Button>
+              <Button
+                className="bg-transparent text-space-dark "
+                onClick={() => handleSmoothScroll(href)}
+              >
+                {label}
+              </Button>
+            </li>
           ))}
         </ul>
-      </NavbarContent>
+      </div>
 
-      {/* Button to toggle the menu */}
-      <NavbarContent className="md:hidden flex">
-        <NavbarBrand as="li" className=" flex items-center justify-center m-auto ml-[3.5rem]">
-          <NextLink href="/">
-            <Image src="./logo/Logo_Space_dark.png" width={90} height={50} alt=""  priority/>
-          </NextLink>
-        </NavbarBrand>
-        <Button
-          className="bg-transparent text-small text-space-dark"
-          onClick={toggleMenu}
+      <div
+        onClick={() => setNav(!nav)}
+        className="cursor-pointer text-space-dark xl:hidden"
+      >
+        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+      </div>
+
+      {nav && (
+        <ul
+          className={`flex flex-col items-center absolute top-[80px] left-0 w-full h-screen bg-space-light text-space-dark ${
+            nav ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
         >
-          {isMenuOpen ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              className="h-6 w-6"
-              onClick={closeMenu}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              className="h-6 w-6"
-              onClick={toggleMenu}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          )}
-        </Button>
-      </NavbarContent>
-
-      <NavbarMenu className={`fixed top-0 left-0 w-full h-full bg-gray-800 transition-opacity ease-in-out duration-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-        <NavbarMenuToggle onClick={toggleMenu} />
-        <ul className="flex flex-col items-center justify-center h-full">
-          {siteConfig.navItems.map((item) => (
-            <Button
-              className="bg-transparent text-small text-space-dark mb-4"
-              key={item.href}
-              onClick={() => {
-                const element = document.getElementById(item.href);
-                element?.scrollIntoView({
-                  behavior: 'smooth',
-                });
-                closeMenu();
-              }}
-            >
-              {item.label}
-            </Button>
+          {siteConfig.navItems.map(({ label, href }) => (
+            <li key={label} className="py-4 text-lg cursor-pointer">
+              <Button
+                className="bg-transparent text-space-dark "
+                onClick={() => handleSmoothScroll(href)}
+              >
+                {label}
+              </Button>
+            </li>
           ))}
         </ul>
-      </NavbarMenu>
-    </NextUINavbar>
+      )}
+    </div>
   );
 };
+
+export default Navbar;

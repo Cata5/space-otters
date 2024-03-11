@@ -48,14 +48,14 @@ export default function Activity() {
         slidesPerView={3}
         navigation
         pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
+        // scrollbar={{ draggable: true }}
         className="max-w-full m-[.5rem] text-space-light"
       >
         {siteConfig.activity.map((activity, index, array) => (
           <SwiperSlide key={activity.title} >
             <Card
               className={`flex flex-col grow bg-space-light text-space-dark hover:cursor-pointer  items-center 
-              m-[4.5rem]  xl:h-[10rem] `}
+              m-[3.5rem]  xl:h-[10rem] w-[320px]`}
               isPressable
               onPress={() => router.push(`/evenimente/${activity.href}`)}
               >

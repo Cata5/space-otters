@@ -33,25 +33,31 @@ export default function Donare() {
     }, []);
 
     return (
-        <div>
-            <link rel="icon" href={`../logo/${siteConfig.logo}`} sizes="any" className="rounded-full" />
-            <div className="max-w-screen-xl mx-auto p-8">
-                <h1 className="text-center text-3xl sm:text-5xl py-4">Donare Cadouri</h1>
-                <div className="py-16 flex flex-col gap-8">
-                    <h1 className="text-center sm:text-left text-3xl sm:text-5xl">Introducere</h1>
-                    <p className="text-md text-center sm:text-xl sm:text-justify whitespace-pre-wrap">
-                        {introContent}</p>
-                    <div className="flex flex-col xl:flex-row gap-4">
-                        <Image src="../evenimente_photos/Donare_Cadouri.jpg" width={600} height={450} loading="lazy" alt="" />
-                        <Image src="../evenimente_photos/Donare_cadouri_cadouri.jpg" width={600} height={450} loading="lazy" alt=" " />
-                    </div>
-                    <h1 className="text-center sm:text-left text-3xl sm:text-5xl ">Desfasurare</h1>
-                    <p className="text-md text-center sm:text-xl sm:text-justify whitespace-pre-wrap">{desfContent}</p>
-                    <Image className="self-center " src="../evenimente_photos/Donare_cadouri_pozagrup.jpg" width={1300} height={0} loading="lazy" alt="" />
-                </div>
-            </div>
+        <div className="flex items-center flex-col gap-[3rem] py-[1rem] mx-[2rem] md:m-auto min-h-screen">
+        <h1 className="text-3xl sm:text-5xl py-4">Donare Cadouri</h1>
+        <div className="flex xl:flex-row flex-col max-w-7xl gap-[1rem]">
+          <div className="flex items-center flex-col max-w-3xl">
+            <h1 className="text-center sm:text-left text-3xl sm:text-5xl my-[3rem]">Introducere</h1>
+            <p className="text-center whitespace-pre-wrap"> {introContent}</p>
+          </div>
         </div>
+            <Image className="self-center " src="../evenimente_photos/Donare_cadouri_pozagrup.jpg" width={1380} height={0} loading="lazy" alt="" />
+        <div className="flex flex-col items-center m-auto justify-center">
+          <h1 className="text-center text-3xl sm:text-5xl my-3">Desfasurare</h1>
+          {desfContent !== null && (
+            <div className="flex flex-wrap justify-center gap-[2rem] m-auto">
+              {desfContent.split('\n').map((paragraph, index) => (
+                <p key={index} className="text-center max-w-md whitespace-pre-wrap my-2">
+                  {paragraph}
+                </p>
+              ))}
+          <Image src="../evenimente_photos/Donare_Cadouri.jpg" width={670} height={450} loading="lazy" alt="" />
+          <Image src="../evenimente_photos/Donare_cadouri_cadouri.jpg" width={670} height={450} loading="lazy" alt=" " />
+            </div>
+          )}
+        </div>
+      </div>
         
-    );
-}
+        );
+    }
 

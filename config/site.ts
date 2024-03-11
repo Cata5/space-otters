@@ -45,34 +45,47 @@ export const siteConfig = {
 		// meet_and_code_desf:'../text/meet_and_code_desf.docx',
 		dacia_introd:'../text/dacia_introd.txt',
 		dacia_desf:'../text/dacia_desf.txt',
+		
 		ipad_introd:'../text/ipad_introd.txt',
 		ipad_desf:'../text/ipad_desf.txt',
+
 		donare_cadouri_introd:'../text/donare_cadouri_introd.txt',
 		donare_cadouri_desf:'../text/donare_cadouri_desf.txt',
+
 		antidorg_introd:'../text/antidorg_introd.txt',
 		antidorg_desf:'../text/antidorg_desf.txt',
+
 		roblod_introd:'../text/roblod_introd.txt',
 		roblod_desf:'../text/roblod_scop.txt',
+
 		liga_buc_introd:'../text/liga_buc_introd.txt',
 		liga_buc_desf:'../text/liga_buc_desf.txt',
+
 		demo_campulung1_introd:'../text/demo_campulung1_introd.txt',
 		demo_campulung1_desf:'../text/demo_campulung1_desf.txt',
+
 		demo_targoviste_introd:'../text/demo_targoviste_introd.txt',
 		demo_targoviste_desf:'../text/demo_targoviste_desf.txt',
+
 		wild_tech_introd:'../text/wild_tech_introd.txt',
 		wild_tech_desf:'../text/wild_tech_desf.txt',
+
 		scoli_introd:'../text/scoli_introd.txt',
 		scoli_scop:'../text/scoli_scop.txt',
 		scoli_desf:'../text/scoli_desf.txt',
+
 		meet_and_code_introd:'../text/meet_and_code_introd.txt',
 		meet_and_code_scop:'../text/meet_and_code_scop.txt',
 		meet_and_code_desf:'../text/meet_and_code_desf.txt',
+
 		cf_introd:'../text/cf_introd.txt',
 		cf_scop:'../text/cf_scop.txt',
 		cf_desf:'../text/cf_desf.txt',
+
 		gradinita_introd:'../text/gradinita_introd.txt',
 		gradinita_scop:'../text/gradinita_scop.txt',
 		gradinita_desf:'../text/gradinita_desf.txt',
+
 		nc_introd:'../text/nc_introd.txt',
 		nc_scop:'../text/nc_scop.txt',
 		nc_desf:'../text/nc_desf.txt',
@@ -99,7 +112,7 @@ export const siteConfig = {
 			file_path: "./text/ftc.txt",
 		},
 		{
-			title: "Anti Drog",
+			title: "Drug-free-future",
 			href: "anti-drog",
 			file_path: "./text/ftc.txt",
 		},
@@ -119,12 +132,12 @@ export const siteConfig = {
 			file_path: "./text/ftc.txt",
 		},
 		{
-			title: "Demo Campulung",
+			title: "WATT's UP Challange",
 			href: "demo-campulung",
 			file_path: "./text/ftc.txt",
 		},
 		{
-			title: "Liga Bucuresti",
+			title: "On stage",
 			href: "liga-bucuresti",
 			file_path: "./text/ftc.txt",
 		},
@@ -139,7 +152,7 @@ export const siteConfig = {
 			file_path: "./text/ftc.txt",
 		},
 		{
-			title: "Gradinita",
+			title: "Gradinita 'Sfanta elena'",
 			href: "gradinita",
 			file_path: "./text/ftc.txt",
 		},
@@ -149,13 +162,18 @@ export const siteConfig = {
 			file_path: "./text/ftc.txt",
 		},
 		{
-			title: "Demo Targoviste",
+			title: "Roboti pe bune",
 			href: "demo-targoviste",
 			file_path: "./text/ftc.txt",
 		},
 		{
 			title: "Noaptea Cercetatorilor",
 			href: "noaptea-cercetatorilor",
+			file_path: "./text/ftc.txt",
+		},
+		{
+			title: "Regionala Bucuresti",
+			href: "regionala",
 			file_path: "./text/ftc.txt",
 		},
 
@@ -290,7 +308,7 @@ export const siteConfig = {
 			description: "description",
 			logo:"Frigo Store.png",
 			website: "firgostore.ro",
-			website_link:"",
+			website_link:"https://frigostore.ro/",
 			width: 200,
 			height:200,
 		},
@@ -307,8 +325,8 @@ export const siteConfig = {
 			label: "Rian & Partners",
 			description: "descripti",
 			logo:"Rian.png",
-			website: "",
-			website_link:"",
+			website: "rian-partners.com",
+			website_link:"https://rian-partners.com/",
 			width: 200,
 			height:200,
 		},
@@ -316,6 +334,24 @@ export const siteConfig = {
 			label: "TLD",
 			description: "description",
 			logo:"TLD.png",
+			website: "",
+			website_link:"",
+			width: 150,
+			height:150,
+		},
+		{
+			label: "HAG",
+			description: "description",
+			logo:"HAG.png",
+			website: "hidroarges.ro",
+			website_link:"https://www.hidroarges.ro/",
+			width: 150,
+			height:150,
+		},
+		{
+			label: "DUS",
+			description: "description",
+			logo:"DUS.png",
 			website: "",
 			website_link:"",
 			width: 200,

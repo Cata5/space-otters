@@ -4,6 +4,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { siteConfig } from "@/config/site";
 import Image from "next/image";
 import { Button } from "@nextui-org/button";
+import { LinkIcon } from "@nextui-org/link";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -26,7 +27,12 @@ const Navbar = () => {
     >
       <div className="flex items-center gap-[20rem]">
         <h1 className="text-2xl font-semibold text-space-dark">
+        <Button
+                className="bg-transparent text-space-dark "
+                onClick={() => handleSmoothScroll("/")}
+              >
           <Image src={'./logo/Logo_Space_dark.png'} alt="" width={90} height={50} />
+          </Button>
         </h1>
 
         <ul className="hidden xl:flex ml-8 space-x-4">

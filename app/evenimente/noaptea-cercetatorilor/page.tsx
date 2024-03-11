@@ -34,27 +34,30 @@ export default function NC() {
   }, []);
 
   return (
-    <div>
-      <div className="flex items-center justify-center mx-[1.75rem] xl:m-auto flex-col max-w-7xl">
-        <h1 className="text-3xl sm:text-5xl py-4">Noaptea Cercetatorilor</h1>
-        <div className="py-16 flex flex-col gap-8">
-          <h1 className="text-center sm:text-left text-3xl sm:text-5xl">Introducere</h1>
-          <div
-            className="text-md text-center sm:text-xl sm:text-justify whitespace-pre-wrap"
-            dangerouslySetInnerHTML={{ __html: introContent || "" }}
-          />
-          <Image src="../evenimente_photos/NC.jpg" width={1300} height={800} alt=""/>
-          <h1 className="text-center sm:text-left text-3xl sm:text-5xl">Scop</h1>
-          <div
-            className="text-md text-center sm:text-xl sm:text-justify whitespace-pre-wrap"
-            dangerouslySetInnerHTML={{ __html: scopContent || "" }}
-          />
-          <h1 className="text-center sm:text-left text-3xl sm:text-5xl">Desfasurare</h1>
-          <div
-            className="text-md text-center sm:text-xl sm:text-justify whitespace-pre-wrap"
-            dangerouslySetInnerHTML={{ __html: desfContent || "" }}
-          />
+    <div className="flex items-center flex-col gap-[3rem] py-[1rem] mx-[2rem] md:m-auto min-h-screen">
+      <h1 className="text-3xl sm:text-5xl py-4">Vizite Scoli Pitesti</h1>
+      <div className="flex xl:flex-row flex-col max-w-7xl gap-[1rem]">
+        <div className="flex items-center flex-col max-w-3xl">
+          <h1 className="text-center sm:text-left text-3xl sm:text-5xl my-[3rem]">Introducere</h1>
+          <p className="text-center whitespace-pre-wrap"> {introContent}</p>
         </div>
+        <div className="flex items-center flex-col max-w-3xl">
+          <h1 className="text-center sm:text-left text-3xl sm:text-5xl my-[3rem]">Scop</h1>
+          <p className="text-center whitespace-pre-wrap">{scopContent}</p>
+        </div>
+      </div>
+      <Image src="../evenimente_photos/NC.jpg" width={1300} height={800} alt="" />
+      <div className="flex flex-col items-center  justify-center">
+        <h1 className="text-center text-3xl sm:text-5xl my-3">Desfasurare</h1>
+        {desfContent !== null && (
+          <div className="flex flex-wrap justify-center gap-[2rem] m-auto">
+            {desfContent.split('\n').map((paragraph, index) => (
+              <p key={index} className=" text-center max-w-md whitespace-pre-wrap my-2">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

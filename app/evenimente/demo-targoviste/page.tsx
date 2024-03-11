@@ -27,38 +27,52 @@ export default function Demo_Targoviste() {
     };
 
     // Fetch text for "Introducere" when the component mounts
-    fetchTxtFile(siteConfig.evenimente.roblod_introd, setIntroContent);
+    fetchTxtFile(siteConfig.evenimente.demo_targoviste_introd, setIntroContent);
 
     // Fetch text for "Desfasurare" when the component mounts
-    fetchTxtFile(siteConfig.evenimente.roblod_desf, setDesfContent);
+    fetchTxtFile(siteConfig.evenimente.demo_targoviste_desf, setDesfContent);
   }, []);
 
   return (
-    <div >
-      <div className="flex items-center justify-center mx-[1.75rem] xl:m-auto flex-col max-w-7xl">
-        <h1 className="text-3xl sm:text-5xl py-4">Demo Targoviste</h1>
-        <div className="py-16 flex flex-col gap-8">
-          <h1 className="text-center sm:text-left text-3xl sm:text-5xl">Introducere</h1>
-          <div
-            className="text-md text-center sm:text-xl sm:text-justify whitespace-pre-wrap"
-            dangerouslySetInnerHTML={{ __html: introContent || "" }}
-          />
-          <div className="flex justify-center flex-wrap gap-[1rem]">
-            <Image src="../evenimente_photos/Demo_Targoviste.jpg" width={630} height={450} alt=""></Image>
-            <Image src="../evenimente_photos/Demo_Targoviste2.jpg" width={630} height={450} alt=""></Image>
-
-          </div>
-          <h1 className="text-center sm:text-left text-3xl sm:text-5xl">Desfasurare</h1>
-          <div
-            className="text-md text-center sm:text-xl sm:text-justify whitespace-pre-wrap"
-            dangerouslySetInnerHTML={{ __html: desfContent || "" }}
-          />
-          <div className="flex flex-wrap gap-[1rem]">
-            <Image src="../evenimente_photos/Demo_Targoviste3.jpg" width={630} height={450} alt=""></Image>
-            <Image src="../evenimente_photos/Demo_Targoviste4.jpg" width={630} height={450} alt=""></Image>
-          </div>
+    <div className="flex items-center flex-col gap-[3rem] py-[1rem] mx-[2rem] md:m-auto min-h-screen">
+    <h1 className="text-3xl sm:text-5xl py-4">Roboti pe bune</h1>
+    <div className="flex xl:flex-row flex-col max-w-7xl gap-[1rem]">
+      <div className="flex flex-col items-center m-auto justify-center">
+        <h1 className="text-center sm:text-left text-3xl sm:text-5xl my-[3rem]">Introducere</h1>
+        {introContent !== null && (
+        <div className="flex flex-wrap justify-center gap-[2rem] m-auto">
+          {introContent.split('\n').map((paragraph, index) => (
+            <p key={index} className="mx-[5rem] text-center max-w-md whitespace-pre-wrap my-2">
+              {paragraph}
+            </p>
+          ))}
         </div>
+      )}
+      <div className="flex flex-row  justify-center gap-[2rem] my-[1rem]">
+      <Image src="../evenimente_photos/Demo_Targoviste.jpg" width={630} height={450} alt=""></Image>
+        <Image src="../evenimente_photos/Demo_Targoviste2.jpg" width={630} height={450} alt=""></Image>
+      </div>
+        
       </div>
     </div>
+    <div className="flex flex-col items-center m-auto justify-center">
+      <h1 className="text-center text-3xl sm:text-5xl my-3">Desfasurare</h1>
+      {desfContent !== null && (
+        <div className="flex flex-wrap justify-center gap-[2rem] m-auto">
+          {desfContent.split('\n').map((paragraph, index) => (
+            <p key={index} className="text-center max-w-xl mx-[2rem] whitespace-pre-wrap my-2">
+              {paragraph}
+            </p>
+          ))}
+        </div>
+      )}
+      <div className="flex flex-row  justify-center gap-[2rem] my-[1rem]">
+      <Image src="../evenimente_photos/Demo_Targoviste4.jpg" width={630} height={450} alt=""></Image>
+      <Image src="../evenimente_photos/Demo_Targoviste3.jpg" width={630} height={450} alt=""></Image>
+      </div>
+    </div>
+  </div>
   );
 }
+
+

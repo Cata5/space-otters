@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 export default function Sponsors() {
     return (
         <div className="flex flex-col items-center justify-center max-w-6xl mx-[1rem] gap-[2rem]">
-        <h1 className="text-[2.5rem] my-[1rem]">Membrii Echipei</h1>
+        <h1 className="text-[2.5rem] my-[1rem]">Sponsori</h1>
         <div className=" flex flex-row items-center justify-center gap-[1rem] flex-wrap m-auto">
         {siteConfig.sponsors_items.map((sponsors) => (
             <Card key={sponsors.label} className="w-full  bg-space-light">

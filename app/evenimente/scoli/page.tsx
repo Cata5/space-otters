@@ -5,6 +5,7 @@
 
 import React, { useEffect, useState } from "react";
 import { siteConfig } from "@/config/site";
+import Image from "next/image";
 
 export default function Scoli() {
   const [introContent, setIntroContent] = useState<string | null>(null);
@@ -65,10 +66,6 @@ export default function Scoli() {
           <h1 className="text-center sm:text-left text-3xl sm:text-5xl my-[3rem]">Introducere</h1>
           <p className="text-center whitespace-pre-wrap"> {introContent}</p>
         </div>
-        <div className="flex items-center flex-col max-w-3xl">
-          <h1 className="text-center sm:text-left text-3xl sm:text-5xl my-[3rem]">Scop</h1>
-          <p className="text-center whitespace-pre-wrap">{scopContent}</p>
-        </div>
       </div>
       <div className="flex flex-col items-center  justify-center">
         <h1 className="text-center text-3xl sm:text-5xl my-3">Desfasurare</h1>
@@ -82,6 +79,24 @@ export default function Scoli() {
           </div>
         )}
       </div>
+      <div className="flex items-center flex-col max-w-3xl">
+        <h1 className="text-center sm:text-left text-3xl sm:text-5xl my-[3rem]">Concluzie</h1>
+        {scopContent !== null && (
+          <div className="flex flex-wrap justify-center gap-[2rem] m-auto">
+            {scopContent.split('\n').map((paragraph, index) => (
+              <p key={index} className=" text-center max-w-3xl whitespace-pre-wrap my-2">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        )}
+        <div className="flex justify-center gap-[1rem] m-auto">
+          <Image src='../evenimente_photos/Poza_scoala1.jpg' alt="" width={450} height={500}></Image>
+          <Image src='../evenimente_photos/Poza_scoala2.jpg' alt="" width={450} height={500}></Image>
+          <Image src='../evenimente_photos/Poza_scoala3.jpg' alt="" width={450} height={500}></Image>
+        </div>
+      </div>
+
     </div>
   );
 }

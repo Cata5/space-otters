@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className="flex items-center gap-[20rem]">
         <h1 className="text-2xl font-semibold text-space-dark">
         <Button
-                className="bg-transparent text-space-dark "
+                className="bg-transparent text-space-dark h-[60px]"
                 onClick={() => handleSmoothScroll("/")}
               >
           <Image src={'./logo/Logo_Space_dark.png'} alt="" width={90} height={50} />

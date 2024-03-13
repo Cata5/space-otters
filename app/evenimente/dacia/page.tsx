@@ -8,6 +8,7 @@ import Image from "next/image";
 export default function Dacia() {
     const [introContent, setIntroContent] = useState<string | null>(null);
     const [desfContent, setDesfContent] = useState<string | null>(null);
+    const [conContent, setConContent] = useState<string | null>(null);
 
     useEffect(() => {
         const fetchTxtFile = async (path: string, setContent: (content: string | null) => void) => {
@@ -30,6 +31,7 @@ export default function Dacia() {
 
         // Fetch text for "Desfasurare" when the component mounts
         fetchTxtFile(siteConfig.evenimente.dacia_desf, setDesfContent);
+        fetchTxtFile(siteConfig.evenimente.dacia_con, setConContent);
     }, []);
 
     return (
@@ -74,7 +76,19 @@ export default function Dacia() {
                 {desfContent !== null && (
                     <div className="flex flex-wrap justify-center gap-[1rem] m-auto">
                         {desfContent.split('\n').map((paragraph, index) => (
-                            <p key={index} className=" text-center text-sm sm:text-md max-w-[380px] whitespace-pre-wrap my-2">
+                            <p key={index} className=" text-center text-md sm:text-md max-w-[380px] whitespace-pre-wrap my-2">
+                                {paragraph}
+                            </p>
+                        ))}
+                    </div>
+                )}
+            </div>
+            <div className="flex flex-col items-center  justify-center">
+                <h1 className="text-center text-3xl sm:text-5xl my-3">Concluzie</h1>
+                {conContent !== null && (
+                    <div className="flex flex-wrap justify-center gap-[1rem] m-auto">
+                        {conContent.split('\n').map((paragraph, index) => (
+                            <p key={index} className=" text-center text-xl sm:text-md max-w-4xl whitespace-pre-wrap my-2">
                                 {paragraph}
                             </p>
                         ))}

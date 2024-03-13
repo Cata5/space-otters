@@ -2,11 +2,14 @@
 
 
 
+
 import React, { useEffect, useState } from "react";
 import { siteConfig } from "@/config/site";
+import Image from "next/image";
 
-export default function AntiDrog() {
+export default function Scoli() {
   const [introContent, setIntroContent] = useState<string | null>(null);
+  const [scopContent, setScopContent] = useState<string | null>(null);
   const [desfContent, setDesfContent] = useState<string | null>(null);
 
   useEffect(() => {
@@ -26,15 +29,15 @@ export default function AntiDrog() {
     };
 
     // Fetch text for "Introducere" when the component mounts
-    fetchTxtFile(siteConfig.evenimente.antidorg_introd, setIntroContent);
-
-    // Fetch text for "Desfasurare" when the component mounts
-    fetchTxtFile(siteConfig.evenimente.antidorg_desf, setDesfContent);
+    fetchTxtFile(siteConfig.evenimente.antidrog_introd, setIntroContent);
+    fetchTxtFile(siteConfig.evenimente.antidrog_scop, setScopContent);
+    // Fetch text for "Desfasurare" wheantidrog component mounts
+    fetchTxtFile(siteConfig.evenimente.antidrog_desf, setDesfContent);
   }, []);
 
   return (
     <div className="flex items-center flex-col gap-[3rem] py-[1rem] mx-[2rem] md:m-auto min-h-screen">
-      <h1 className="text-3xl sm:text-5xl py-4">Drug-free-future</h1>
+      <h1 className="text-3xl sm:text-5xl py-4">Drug Free Future</h1>
       <div className="flex xl:flex-row flex-col max-w-7xl gap-[1rem]">
         <div className="flex items-center flex-col max-w-3xl">
           <h1 className="text-center sm:text-left text-3xl sm:text-5xl my-[3rem]">Introducere</h1>
@@ -53,6 +56,25 @@ export default function AntiDrog() {
           </div>
         )}
       </div>
+      <div className="flex items-center flex-col max-w-3xl">
+        <h1 className="text-center sm:text-left text-3xl sm:text-5xl my-[3rem]">Concluzie</h1>
+        {scopContent !== null && (
+          <div className="flex flex-wrap justify-center gap-[2rem] m-auto">
+            {scopContent.split('\n').map((paragraph, index) => (
+              <p key={index} className=" text-center max-w-3xl whitespace-pre-wrap my-2">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        )}
+      </div>
+        <div className="flex justify-center mx-[1rem] gap-[1rem] m-auto flex-wrap">
+          <Image src='../evenimente_photos/DFF1.jpg' alt="" width={450} height={500}></Image>
+          <Image src='../evenimente_photos/DFF2.jpg' alt="" width={450} height={500}></Image>
+          <Image src='../evenimente_photos/DFF3.jpg' alt="" width={450} height={500}></Image>
+          <Image src='../evenimente_photos/DFF4.jpg' alt="" width={450} height={500}></Image>
+        </div>
+
     </div>
   );
 }

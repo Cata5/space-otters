@@ -11,7 +11,7 @@ export default function Members() {
         {siteConfig.members_items.map((members) => (
           <Card
             isFooterBlurred
-            radius="lg"
+            radius="none"
             className="border-none "
             key={members.name}
           >

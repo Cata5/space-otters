@@ -45,15 +45,18 @@ export const siteConfig = {
 		// meet_and_code_desf:'../text/meet_and_code_desf.docx',
 		dacia_introd:'../text/dacia_introd.txt',
 		dacia_desf:'../text/dacia_desf.txt',
-		
+		dacia_con:'../text/dacia_con.txt',
+
 		ipad_introd:'../text/ipad_introd.txt',
 		ipad_desf:'../text/ipad_desf.txt',
+		ipad_con:'../text/ipad_con.txt',
 
 		donare_cadouri_introd:'../text/donare_cadouri_introd.txt',
 		donare_cadouri_desf:'../text/donare_cadouri_desf.txt',
 
-		antidorg_introd:'../text/antidorg_introd.txt',
-		antidorg_desf:'../text/antidorg_desf.txt',
+		antidrog_introd:'../text/antidorg_introd.txt',
+		antidrog_desf:'../text/antidorg_desf.txt',
+		antidrog_scop:'../text/antidorg_scop.txt',
 
 		roblod_introd:'../text/roblod_introd.txt',
 		roblod_desf:'../text/roblod_scop.txt',

@@ -4,10 +4,11 @@
 
 import React, { useEffect, useState } from "react";
 import { siteConfig } from "@/config/site";
-
+import Image from "next/image";
 export default function Ipad() {
   const [introContent, setIntroContent] = useState<string | null>(null);
   const [desfContent, setDesfContent] = useState<string | null>(null);
+  const [conContent, setConContent] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchTxtFile = async (path: string, setContent: (content: string | null) => void) => {
@@ -30,6 +31,7 @@ export default function Ipad() {
 
     // Fetch text for "Desfasurare" when the component mounts
     fetchTxtFile(siteConfig.evenimente.ipad_desf, setDesfContent);
+    fetchTxtFile(siteConfig.evenimente.ipad_con, setConContent);
   }, []);
 
   return (
@@ -52,6 +54,25 @@ export default function Ipad() {
             ))}
           </div>
         )}
+      </div>
+      <div className="flex flex-col items-center m-auto justify-center">
+        <h1 className="text-center text-3xl sm:text-5xl my-3">Concluzie</h1>
+        {conContent !== null && (
+          <div className="flex flex-wrap justify-center gap-[2rem] m-auto">
+            {conContent.split('\n').map((paragraph, index) => (
+              <p key={index} className="text-center max-w-md whitespace-pre-wrap my-2">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        )}
+      <div className="flex m-auto justify-center gap-[1rem] flex-wrap">
+      <Image src='../evenimente_photos/ipad1.jpg' alt="" width={650} height={500}></Image>
+      <Image src='../evenimente_photos/ipad2.jpg' alt="" width={650} height={500}></Image>
+      <Image src='../evenimente_photos/ipad3.jpg' alt="" width={650} height={500}></Image>
+      <Image src='../evenimente_photos/ipad4.png' alt="" width={650} height={500}></Image>
+
+      </div>
       </div>
     </div>
   );

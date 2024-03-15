@@ -4,7 +4,8 @@
 
 import React, { useEffect, useState } from "react";
 import { siteConfig } from "@/config/site";
-
+import Image from "next/image";
+import Navbar_Ev from "@/components/navbar_events";
 export default function Demo_Campulung() {
   const [introContent, setIntroContent] = useState<string | null>(null);
   const [desfContent, setDesfContent] = useState<string | null>(null);
@@ -33,8 +34,10 @@ export default function Demo_Campulung() {
   }, []);
 
   return (
+    <div>
+      <Navbar_Ev />
     <div className="flex items-center flex-col gap-[3rem] py-[1rem] mx-[2rem] md:m-auto min-h-screen">
-      <h1 className="text-3xl sm:text-5xl py-4">RoBlood</h1>
+      <h1 className="text-3xl sm:text-5xl py-[5rem]">RoBlood</h1>
       <div className="flex flex-col items-center m-auto justify-center">
         <h1 className="text-center text-3xl sm:text-5xl my-3">Introducere</h1>
         {introContent !== null && (
@@ -59,6 +62,11 @@ export default function Demo_Campulung() {
           </div>
         )}
       </div>
+      <div className="flex m-auto gap-[1rem] justify-center flex-wrap">
+        <Image src='../evenimente_photos/RoB1.png' width={900} height={400} alt=""></Image>
+        <Image src='../evenimente_photos/RoB2.png' width={900} height={400} alt=""></Image>
+      </div>
+    </div>
     </div>
   );
 }

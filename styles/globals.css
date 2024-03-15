@@ -21,3 +21,6 @@ body {
 .swiper-scrollbar-drag,.swiper-pagination-bullet{ 
   background-color: #B4C8D8 !important;
 }
+.img-border, img{
+@apply rounded-[1rem] border-[3px] border-space-light;
+}

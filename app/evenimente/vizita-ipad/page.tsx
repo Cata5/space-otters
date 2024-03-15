@@ -5,6 +5,7 @@
 import React, { useEffect, useState } from "react";
 import { siteConfig } from "@/config/site";
 import Image from "next/image";
+import Navbar_Ev from "@/components/navbar_events";
 export default function Ipad() {
   const [introContent, setIntroContent] = useState<string | null>(null);
   const [desfContent, setDesfContent] = useState<string | null>(null);
@@ -35,8 +36,10 @@ export default function Ipad() {
   }, []);
 
   return (
+    <div>
+      <Navbar_Ev />
     <div className="flex items-center flex-col gap-[3rem] py-[1rem] mx-[2rem] md:m-auto min-h-screen">
-      <h1 className="text-3xl sm:text-5xl py-4">Vizita Ipad</h1>
+      <h1 className="text-3xl sm:text-5xl py-[5rem]">Vizita Ipad</h1>
       <div className="flex xl:flex-row flex-col max-w-7xl gap-[1rem]">
         <div className="flex items-center flex-col max-w-3xl">
           <h1 className="text-center sm:text-left text-3xl sm:text-5xl my-[3rem]">Introducere</h1>
@@ -60,7 +63,7 @@ export default function Ipad() {
         {conContent !== null && (
           <div className="flex flex-wrap justify-center gap-[2rem] m-auto">
             {conContent.split('\n').map((paragraph, index) => (
-              <p key={index} className="text-center max-w-md whitespace-pre-wrap my-2">
+              <p key={index} className="text-center max-w-3xl whitespace-pre-wrap my-2">
                 {paragraph}
               </p>
             ))}
@@ -74,6 +77,7 @@ export default function Ipad() {
 
       </div>
       </div>
+    </div>
     </div>
   );
 }

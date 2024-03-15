@@ -12,12 +12,12 @@ export default function Members() {
           <Card
             isFooterBlurred
             radius="none"
-            className="border-none "
+            className="border-none"
             key={members.name}
           >
             <Image
               alt="Picture with a member"
-              className="object-fit"
+              className="object-fit !rounded-none"
               height={siteConfig.members_img_sizes.height}
               src={`./members_photos/${members.image}`}
               width={siteConfig.members_img_sizes.width}
@@ -37,7 +37,7 @@ export default function Members() {
                 className="w-[65px]"
               >
                 <Button className="bg-transparent rounded flex items-center justify-center w-[20px]" type="button">
-                  <Image src={`./${siteConfig.instagram_icon.path}`} width={25} height={25} className="rounded" loading="lazy" alt="instagram icon" />
+                  <Image src={`./${siteConfig.instagram_icon.path}`} width={25} height={25} className="rounded border-none" loading="lazy" alt="instagram icon" />
 
                 </Button>
               </Link>

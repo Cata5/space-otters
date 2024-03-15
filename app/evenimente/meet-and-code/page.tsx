@@ -2,7 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import { siteConfig } from "@/config/site";
-
+import Image from "next/image";
+import Navbar_Ev from "@/components/navbar_events";
 export default function Scoli() {
   const [introContent, setIntroContent] = useState<string | null>(null);
   const [scopContent, setScopContent] = useState<string | null>(null);
@@ -33,8 +34,10 @@ export default function Scoli() {
   }, []);
 
   return (
+    <div>
+      <Navbar_Ev />
     <div className="flex items-center flex-col gap-[3rem] py-[1rem] mx-[2rem] md:m-auto min-h-screen">
-      <h1 className="text-3xl sm:text-5xl py-4">Meet and Code</h1>
+      <h1 className="text-3xl sm:text-5xl py-[5rem]">Meet and Code</h1>
       <div className="flex flex-col items-center  justify-center">
         <h1 className="text-center text-3xl sm:text-5xl my-3">Introducere</h1>
         {introContent !== null && (
@@ -71,6 +74,12 @@ export default function Scoli() {
           </div>
         )}
       </div>
+      <div className="flex m-auto justify-center flex-wrap gap-[1rem]">
+        <Image src='../evenimente_photos/MC1.jpg' width={550} height={450} alt=""></Image>
+        <Image src='../evenimente_photos/MC2.jpg' width={550} height={450} alt=""></Image>
+        <Image src='../evenimente_photos/MC3.jpg' width={550} height={450} alt=""></Image>
+      </div>
+    </div>
     </div> 
   );
 }

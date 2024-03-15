@@ -1,14 +1,13 @@
-import Link from "next/link";
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { siteConfig } from "@/config/site";
 import Image from "next/image";
 import { Button } from "@nextui-org/button";
-import { LinkIcon } from "@nextui-org/link";
-
+import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@nextui-org/react";
+import { useRouter } from 'next/navigation';
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-
+  const router = useRouter();
   const handleSmoothScroll = (href: string) => {
     const target = document.getElementById(href);
     if (target) {
@@ -21,17 +20,16 @@ const Navbar = () => {
 
   return (
     <div
-      className={`flex xl:justify-center justify-between  items-center h-20 px-4 bg-space-light fixed w-full shadow-xl z-[100]  ${
-        nav ? "py-4" : ""
-      }`}
+      className={`flex xl:justify-center justify-between  items-center h-20 px-4 bg-space-light fixed w-full shadow-xl z-[100]  ${nav ? "py-4" : ""
+        }`}
     >
       <div className="flex items-center gap-[20rem]">
         <h1 className="text-2xl font-semibold text-space-dark">
-        <Button
-                className="bg-transparent text-space-dark h-[60px]"
-                onClick={() => handleSmoothScroll("/")}
-              >
-          <Image src={'./logo/Logo_Space_dark.png'} alt="" width={90} height={50} />
+          <Button
+            className="bg-transparent text-space-dark h-[60px]"
+            onClick={() => handleSmoothScroll("/")}
+          >
+            <Image src={'./logo/Logo_Space_dark.png'} alt="" width={90} height={50} />
           </Button>
         </h1>
 
@@ -61,18 +59,36 @@ const Navbar = () => {
 
       {nav && (
         <ul
-          className={`flex flex-col items-center absolute top-[80px] left-0 w-full h-screen bg-space-light text-space-dark ${
-            nav ? "opacity-100" : "opacity-0 pointer-events-none"
-          }`}
+          className={`flex flex-col items-center absolute top-[80px] left-0 w-full h-screen bg-space-light text-space-dark ${nav ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
         >
           {siteConfig.navItems.map(({ label, href }) => (
             <li key={label} className="py-4 text-lg cursor-pointer">
-              <Button
-                className="bg-transparent text-space-dark "
-                onClick={() => handleSmoothScroll(href)}
-              >
-                {label}
-              </Button>
+              {href === 'evenimente' ? (
+                <Dropdown >
+                  <DropdownTrigger>
+                    <Button className="bg-transparent text-space-dark">
+                      {label}
+                    </Button>
+                  </DropdownTrigger>
+                  <DropdownMenu aria-label="Dynamic Actions">
+                    {siteConfig.activity.map((title, index) => (
+                      <DropdownItem key={index}>
+                        <Button className="bg-transparent" onClick={() => router.push(`/evenimente/${title.href}`)}>
+                        {title.title}
+                        </Button>
+                      </DropdownItem>
+                    ))}
+                  </DropdownMenu>
+                </Dropdown>
+              ) : (
+                <Button
+                  className="bg-transparent text-space-dark"
+                  onClick={() => handleSmoothScroll(href)}
+                >
+                  {label}
+                </Button>
+              )}
             </li>
           ))}
         </ul>

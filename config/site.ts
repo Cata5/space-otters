@@ -63,9 +63,11 @@ export const siteConfig = {
 
 		liga_buc_introd:'../text/liga_buc_introd.txt',
 		liga_buc_desf:'../text/liga_buc_desf.txt',
+		liga_buc_obiect:'../text/liga_buc_obiect.txt',
 
 		demo_campulung1_introd:'../text/demo_campulung1_introd.txt',
 		demo_campulung1_desf:'../text/demo_campulung1_desf.txt',
+		demo_campulung1_scop:'../text/demo_campulung1_scop.txt',
 
 		demo_targoviste_introd:'../text/demo_targoviste_introd.txt',
 		demo_targoviste_desf:'../text/demo_targoviste_desf.txt',
@@ -84,6 +86,7 @@ export const siteConfig = {
 		cf_introd:'../text/cf_introd.txt',
 		cf_scop:'../text/cf_scop.txt',
 		cf_desf:'../text/cf_desf.txt',
+		cf_con:'../text/cf_con.txt',
 
 		gradinita_introd:'../text/gradinita_introd.txt',
 		gradinita_scop:'../text/gradinita_scop.txt',
